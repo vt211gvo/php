@@ -1,7 +1,10 @@
 <?php
 
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\TestController;
+use App\Http\Controllers\GuestController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,18 +22,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::prefix('admin')
-    ->as('admin.')
-    ->middleware(['auth', 'admin', 'verified'])
-    ->group(function () {
-        Route::resource('products', ProductController::class)->except('show');
+Route::resource('products', BookingController::class);
 
-    });
+Route::resource('services', ServiceController::class);
 
-Route::prefix('products')
-    ->as('front.products.')
-    ->group(function () {
-        Route::get('/', [ProductController::class, 'getProducts'])->name('index');
-        Route::get('/{id}', [ProductController::class, 'getProductItem'])->name('show');
+Route::resource('payments', PaymentController::class);
 
-    });
+Route::resource('reviews', ReviewController::class);
+
+Route::resource('guests', GuestController::class);
