@@ -1,61 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+  <component name="LaravelPint">
+    <laravel_pint_settings>
+      <LaravelPintConfiguration tool_path="$PROJECT_DIR$/Laravel/vendor/bin/pint" />
+    </laravel_pint_settings>
   </component>
-  <component name="ChangeListManager">
-    <list default="true" id="c6abaf8f-b09f-4609-9101-47f35ffec9a6" name="Changes" comment="feat: create db in docker">
-      <change afterPath="$PROJECT_DIR$/Symfony/src/Controller/BedController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Symfony/src/Controller/BookingController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Symfony/src/Controller/GuestController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Symfony/src/Controller/NotificationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Symfony/src/Controller/PaymentController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Symfony/src/Controller/ReviewController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Symfony/src/Controller/RoomController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Symfony/src/Controller/ServiceController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Symfony/src/Controller/ServiceOrderController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Symfony/src/Controller/StaffController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Symfony/src/Controller/ProductController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Symfony/src/Controller/TestController.php" beforeDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
+  <component name="MessDetectorOptionsConfiguration">
+    <option name="transferred" value="true" />
   </component>
-  <component name="ComposerConfigs">
-    <option name="configs">
-      <option value="$PROJECT_DIR$/Symfony/composer.json" />
-    </option>
+  <component name="PHPCSFixerOptionsConfiguration">
+    <option name="transferred" value="true" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/Laravel/composer.json</pharConfigPath>
-    <execution>
-      <executable path="composer" />
-    </execution>
+  <component name="PHPCodeSnifferOptionsConfiguration">
+    <option name="highlightLevel" value="WARNING" />
+    <option name="transferred" value="true" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="lab2" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;vt211gvo&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/vt211gvo/php.git&quot;,
-    &quot;accountId&quot;: &quot;8f97da51-f6e4-45dc-9418-7eaa8961c7bc&quot;
-  }
-}</component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.1">
+  <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/Laravel/vendor/psr/clock" />
       <path value="$PROJECT_DIR$/Laravel/vendor/psr/http-message" />
@@ -322,151 +282,17 @@
       <path value="$PROJECT_DIR$/Symfony/vendor/symfony/framework-bundle" />
     </include_path>
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
-}</component>
-  <component name="ProjectId" id="2w5z85021rkS3LUs6cmY1mtkgdb" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
+  <component name="PhpStanOptionsConfiguration">
+    <option name="transferred" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Composer Script.dev.executor": "Run",
-    "Docker.Laravel/compose.yaml: Compose Deployment.executor": "Run",
-    "Docker.Symfony/compose.yaml: Compose Deployment.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "lab3",
-    "last_opened_file_path": "C:/Users/vika7/Desktop/4 course 2 semester/фреймворки/Symfony",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\vika7\Desktop\4 course 2 semester\фреймворки\Symfony" />
-    </key>
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/Symfony/phpunit.xml.dist" custom_loader_path="$PROJECT_DIR$/Symfony/vendor/autoload.php" use_configuration_file="true" />
+      <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/Laravel/phpunit.xml" custom_loader_path="$PROJECT_DIR$/Laravel/vendor/autoload.php" use_configuration_file="true" />
+    </phpunit_settings>
   </component>
-  <component name="RunManager" selected="Docker.Symfony/compose.yaml: Compose Deployment">
-    <configuration name="dev" type="ComposerRunConfigurationType" factoryName="Composer Script" temporary="true">
-      <option name="pathToComposerJson" value="$PROJECT_DIR$/Laravel/composer.json" />
-      <option name="script" value="dev" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner configuration_file="$PROJECT_DIR$/Laravel/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Symfony" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner configuration_file="$PROJECT_DIR$/Symfony/phpunit.xml.dist" scope="XML" use_alternative_configuration_file="true" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Laravel/compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="envFilePath" value="" />
-          <option name="sourceFilePath" value="Laravel/compose.yaml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="Symfony/compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="Symfony/compose.yaml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Docker.Symfony/compose.yaml: Compose Deployment" />
-        <item itemvalue="Docker.Laravel/compose.yaml: Compose Deployment" />
-        <item itemvalue="Composer Script.dev" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PS-242.23339.16" />
-        <option value="bundled-php-predefined-a98d8de5180a-90914f2295cb-com.jetbrains.php.sharedIndexes-PS-242.23339.16" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="c6abaf8f-b09f-4609-9101-47f35ffec9a6" name="Changes" comment="" />
-      <created>1745346059372</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1745346059372</updated>
-      <workItem from="1745346060536" duration="1836000" />
-      <workItem from="1745348042464" duration="6274000" />
-      <workItem from="1745432645432" duration="2477000" />
-      <workItem from="1745681325679" duration="4637000" />
-    </task>
-    <task id="LOCAL-00001" summary="Init, lab 1">
-      <option name="closed" value="true" />
-      <created>1745347955911</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1745347955911</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Init, lab 1">
-      <option name="closed" value="true" />
-      <created>1745348211941</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1745348211941</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Lab 1">
-      <option name="closed" value="true" />
-      <created>1745348636280</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1745348636280</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Lab 2">
-      <option name="closed" value="true" />
-      <created>1745359518703</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1745359518703</updated>
-    </task>
-    <task id="LOCAL-00005" summary="feat: create db in docker">
-      <option name="closed" value="true" />
-      <created>1745755748419</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1745755748419</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Init, lab 1" />
-    <MESSAGE value="Lab 1" />
-    <MESSAGE value="Lab 2" />
-    <MESSAGE value="feat: create db in docker" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: create db in docker" />
+  <component name="PsalmOptionsConfiguration">
+    <option name="transferred" value="true" />
   </component>
 </project>
