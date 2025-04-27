@@ -1,0 +1,35 @@
+services:
+  ###> doctrine/doctrine-bundle ###
+  hostel-symfony-db:
+    platform: linux/amd64
+    image: mysql:5.7
+    volumes:
+      - hostel-db-symfony-data:/var/lib/mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: hostel-symfony-db
+      MYSQL_PASSWORD: password
+    networks:
+      - hostel-symfony-net
+
+  hostel-symfony-phpmyadmin:
+    depends_on:
+      - hostel-symfony-db
+    image: phpmyadmin
+    restart: always
+    ports:
+      - "8090:80"
+    environment:
+      PMA_HOST: hostel-symfony-db
+      MYSQL_ROOT_PASSWORD: password
+    networks:
+      - hostel-symfony-net
+
+networks:
+  hostel-symfony-net:
+
+volumes:
+  hostel-db-symfony-data:
