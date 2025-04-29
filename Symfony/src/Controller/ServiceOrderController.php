@@ -24,10 +24,14 @@ class ServiceOrderController extends AbstractController
     }
 
     #[Route('/', name: 'get_service_orders', methods: ['GET'])]
-    public function getServiceOrders(): JsonResponse
+    public function getServiceOrders(Request $request): JsonResponse
     {
-        $serviceOrders = $this->serviceOrderRepository->findAll();
-        return $this->json($serviceOrders);
+        $requestData = $request->query->all();
+        $itemsPerPage = isset($requestData['itemsPerPage']) ? (int)$requestData['itemsPerPage'] : 10;
+        $page = isset($requestData['page']) ? (int)$requestData['page'] : 1;
+
+        $data = $this->serviceOrderRepository->getAllByFilter($requestData, $itemsPerPage, $page);
+        return new JsonResponse($data, Response::HTTP_OK);
     }
 
     #[Route('/{id}', name: 'get_service_order', methods: ['GET'])]

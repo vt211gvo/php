@@ -24,10 +24,14 @@ class StaffController extends AbstractController
     }
 
     #[Route('/', name: 'get_staff', methods: ['GET'])]
-    public function getStaff(): JsonResponse
+    public function getStaff(Request $request): JsonResponse
     {
-        $staff = $this->staffRepository->findAll();
-        return $this->json($staff);
+        $requestData = $request->query->all();
+        $itemsPerPage = isset($requestData['itemsPerPage']) ? (int)$requestData['itemsPerPage'] : 10;
+        $page = isset($requestData['page']) ? (int)$requestData['page'] : 1;
+
+        $data = $this->staffRepository->getAllByFilter($requestData, $itemsPerPage, $page);
+        return new JsonResponse($data, Response::HTTP_OK);
     }
 
     #[Route('/{id}', name: 'get_staff_by_id', methods: ['GET'])]

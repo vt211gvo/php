@@ -24,10 +24,14 @@ class ServiceController extends AbstractController
     }
 
     #[Route('/', name: 'get_services', methods: ['GET'])]
-    public function getServices(): JsonResponse
+    public function getServices(Request $request): JsonResponse
     {
-        $services = $this->serviceRepository->findAll();
-        return $this->json($services);
+        $requestData = $request->query->all();
+        $itemsPerPage = isset($requestData['itemsPerPage']) ? (int)$requestData['itemsPerPage'] : 10;
+        $page = isset($requestData['page']) ? (int)$requestData['page'] : 1;
+
+        $data = $this->serviceRepository->getAllByFilter($requestData, $itemsPerPage, $page);
+        return new JsonResponse($data, Response::HTTP_OK);
     }
 
     #[Route('/{id}', name: 'get_service', methods: ['GET'])]

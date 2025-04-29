@@ -24,10 +24,14 @@ class GuestController extends AbstractController
     }
 
     #[Route('/', name: 'get_guests', methods: ['GET'])]
-    public function getGuests(): JsonResponse
+    public function getGuests(Request $request): JsonResponse
     {
-        $guests = $this->guestRepository->findAll();
-        return $this->json($guests);
+        $requestData = $request->query->all();
+        $itemsPerPage = isset($requestData['itemsPerPage']) ? (int)$requestData['itemsPerPage'] : 10;
+        $page = isset($requestData['page']) ? (int)$requestData['page'] : 1;
+
+        $data = $this->guestRepository->getAllByFilter($requestData, $itemsPerPage, $page);
+        return new JsonResponse($data, Response::HTTP_OK);
     }
 
     #[Route('/{id}', name: 'get_guest', methods: ['GET'])]

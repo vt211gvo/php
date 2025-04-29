@@ -4,20 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6abaf8f-b09f-4609-9101-47f35ffec9a6" name="Changes" comment="feat: add controllers with CRUD operation for symfony project">
+    <list default="true" id="c6abaf8f-b09f-4609-9101-47f35ffec9a6" name="Changes" comment="feat: add optional filters and pagination for laravel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel/app/Http/Controllers/BookingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel/app/Http/Controllers/BookingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel/app/Http/Controllers/GuestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel/app/Http/Controllers/GuestController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel/app/Http/Controllers/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel/app/Http/Controllers/PaymentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel/app/Http/Controllers/ReviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel/app/Http/Controllers/ReviewController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel/app/Http/Controllers/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel/app/Http/Controllers/ServiceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel/app/Models/Booking.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel/app/Models/Booking.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel/app/Models/Guest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel/app/Models/Guest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel/app/Models/Payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel/app/Models/Payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel/app/Models/Review.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel/app/Models/Review.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel/app/Models/Service.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel/app/Models/Service.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laravel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Controller/BedController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Controller/BedController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Controller/BookingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Controller/BookingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Controller/GuestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Controller/GuestController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Controller/NotificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Controller/NotificationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Controller/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Controller/PaymentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Controller/ReviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Controller/ReviewController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Controller/RoomController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Controller/RoomController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Controller/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Controller/ServiceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Controller/ServiceOrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Controller/ServiceOrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Controller/StaffController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Controller/StaffController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/BedRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Repository/BedRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/BookingRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Repository/BookingRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/CurrencyRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/GuestRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Repository/GuestRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/NotificationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Repository/NotificationRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/PaymentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Repository/PaymentRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/ProductRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/ReviewRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Repository/ReviewRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/RoomRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Repository/RoomRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/ServiceOrderRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Repository/ServiceOrderRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/ServiceRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Repository/ServiceRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/StaffRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Repository/StaffRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,7 +348,7 @@
     "Docker.Symfony/compose.yaml: Compose Deployment.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "lab4",
-    "last_opened_file_path": "C:/Users/vika7/Desktop/4 course 2 semester/фреймворки/Symfony",
+    "last_opened_file_path": "C:/Users/vika7/Desktop/4 course 2 semester/фреймворки/Symfony/src/Repository",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -350,6 +360,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vika7\Desktop\4 course 2 semester\фреймворки\Symfony\src\Repository" />
       <recent name="C:\Users\vika7\Desktop\4 course 2 semester\фреймворки\Symfony" />
     </key>
   </component>
@@ -426,7 +437,7 @@
       <workItem from="1745432645432" duration="2477000" />
       <workItem from="1745681325679" duration="4637000" />
       <workItem from="1745759824533" duration="4084000" />
-      <workItem from="1745943458229" duration="5923000" />
+      <workItem from="1745943458229" duration="9012000" />
     </task>
     <task id="LOCAL-00001" summary="Init, lab 1">
       <option name="closed" value="true" />
@@ -476,7 +487,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745759969827</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: add optional filters and pagination for laravel">
+      <option name="closed" value="true" />
+      <created>1745950633421</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1745950633421</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,6 +507,7 @@
     <MESSAGE value="Lab 2" />
     <MESSAGE value="feat: create db in docker" />
     <MESSAGE value="feat: add controllers with CRUD operation for symfony project" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add controllers with CRUD operation for symfony project" />
+    <MESSAGE value="feat: add optional filters and pagination for laravel" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add optional filters and pagination for laravel" />
   </component>
 </project>

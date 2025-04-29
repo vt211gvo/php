@@ -28,10 +28,14 @@ class BedController extends AbstractController
     }
 
     #[Route('/', name: 'get_beds', methods: ['GET'])]
-    public function getBeds(): JsonResponse
+    public function getBeds(Request $request): JsonResponse
     {
-        $beds = $this->bedRepository->findAll();
-        return $this->json($beds);
+        $requestData = $request->query->all();
+        $itemsPerPage = isset($requestData['itemsPerPage']) ? (int)$requestData['itemsPerPage'] : 10;
+        $page = isset($requestData['page']) ? (int)$requestData['page'] : 1;
+
+        $data = $this->bedRepository->getAllByFilter($requestData, $itemsPerPage, $page);
+        return new JsonResponse($data, Response::HTTP_OK);
     }
 
     #[Route('/{id}', name: 'get_bed', methods: ['GET'])]

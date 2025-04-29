@@ -24,10 +24,14 @@ class ReviewController extends AbstractController
     }
 
     #[Route('/', name: 'get_reviews', methods: ['GET'])]
-    public function getReviews(): JsonResponse
+    public function getReviews(Request $request): JsonResponse
     {
-        $reviews = $this->reviewRepository->findAll();
-        return $this->json($reviews);
+        $requestData = $request->query->all();
+        $itemsPerPage = isset($requestData['itemsPerPage']) ? (int)$requestData['itemsPerPage'] : 10;
+        $page = isset($requestData['page']) ? (int)$requestData['page'] : 1;
+
+        $data = $this->reviewRepository->getAllByFilter($requestData, $itemsPerPage, $page);
+        return new JsonResponse($data, Response::HTTP_OK);
     }
 
     #[Route('/{id}', name: 'get_review', methods: ['GET'])]
