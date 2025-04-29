@@ -11,7 +11,7 @@ class Review extends Model
 
     protected $fillable = ['guest_id', 'comment', 'rating'];
 
-    public function guest()
+    public function guest(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Guest::class);
     }

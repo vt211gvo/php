@@ -9,13 +9,34 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ServiceController extends Controller
 {
+    public const ITEMS_PER_PAGE = 2;
+
     /**
-     * Get all services
+     * Get all services with optional filters and pagination.
+     * /services?name=Paypds&price=32322
+     *
+     * @param Request $request
      * @return JsonResponse
      */
-    public function index(): \Illuminate\Http\JsonResponse
+    public function index(Request $request): JsonResponse
     {
-        $services = Service::all();
+        $query = Service::query();
+
+        if ($request->has('id')) {
+            $query->where('id', $request->id);
+        }
+
+        if ($request->has('name')) {
+            $query->where('name', 'like', "%{$request->name}%");
+        }
+
+        if ($request->has('price')) {
+            $query->where('price', $request->price);
+        }
+
+        $services = $query->paginate(self::ITEMS_PER_PAGE);
+        $services->appends($request->except('page'));
+
         return response()->json($services, Response::HTTP_OK);
     }
 

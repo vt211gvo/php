@@ -10,13 +10,42 @@ use Symfony\Component\HttpFoundation\Response;
 
 class BookingController extends Controller
 {
+    public const ITEMS_PER_PAGE = 2;
+
     /**
      * Get all bookings
+     * @param Request $request
      * @return JsonResponse
+     * /bookings?guest_id=1&room=bathroom
      */
-    public function index(): \Illuminate\Http\JsonResponse
+    public function index(Request $request): JsonResponse
     {
-        $bookings = Booking::all();
+        $query = Booking::query();
+
+        if ($request->has('id')) {
+            $query->where('id', $request->id);
+        }
+
+        if ($request->has('guest_id')) {
+            $query->where('guest_id', $request->guest_id);
+        }
+
+        if ($request->has('room')) {
+            $query->where('room', 'like', "%{$request->room}%");
+        }
+
+        if ($request->has('start_date')) {
+            $query->where('start_date', '>=', $request->start_date);
+        }
+
+        if ($request->has('end_date')) {
+            $query->where('end_date', '<=', $request->end_date);
+        }
+
+        $bookings = $query->paginate(self::ITEMS_PER_PAGE);
+
+        $bookings->appends($request->except('page'));
+
         return response()->json($bookings, Response::HTTP_OK);
     }
 

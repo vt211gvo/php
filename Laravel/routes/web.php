@@ -22,7 +22,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('products', BookingController::class);
+Route::resource('bookings', BookingController::class);
 
 Route::resource('services', ServiceController::class);
 

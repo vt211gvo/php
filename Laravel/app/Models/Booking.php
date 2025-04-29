@@ -11,12 +11,12 @@ class Booking extends Model
 
     protected $fillable = ['guest_id', 'room', 'check_in', 'check_out'];
 
-    public function guest()
+    public function guest(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Guest::class);
     }
 
-    public function payment()
+    public function payment(): \Illuminate\Database\Eloquent\Relations\HasOne
     {
         return $this->hasOne(Payment::class);
     }

@@ -10,13 +10,38 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ReviewController extends Controller
 {
+    public const ITEMS_PER_PAGE = 1;
+
     /**
-     * Get all reviews
+     * Get all reviews with optional filters and pagination.
+     * /reviews?guest_id=1&rating=5&comment=commmmment&guest_id=1
+     *
+     * @param Request $request
      * @return JsonResponse
      */
-    public function index(): \Illuminate\Http\JsonResponse
+    public function index(Request $request): JsonResponse
     {
-        $reviews = Review::all();
+        $query = Review::query();
+
+        if ($request->has('id')) {
+            $query->where('id', $request->id);
+        }
+
+        if ($request->has('guest_id')) {
+            $query->where('guest_id', $request->guest_id);
+        }
+
+        if ($request->has('rating')) {
+            $query->where('rating', $request->rating);
+        }
+
+        if ($request->has('comment')) {
+            $query->where('comment', 'like', "%{$request->comment}%");
+        }
+
+        $reviews = $query->paginate(self::ITEMS_PER_PAGE);
+        $reviews->appends($request->except('page'));
+
         return response()->json($reviews, Response::HTTP_OK);
     }
 

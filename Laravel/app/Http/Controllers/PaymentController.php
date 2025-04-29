@@ -10,13 +10,45 @@ use Symfony\Component\HttpFoundation\Response;
 
 class PaymentController extends Controller
 {
+    public const ITEMS_PER_PAGE = 2;
+
     /**
-     * Get all payments
+     * Get all payments with optional filters and pagination.
+     * /payments?booking_id=1&method=credit
+     * @param Request $request
      * @return JsonResponse
      */
-    public function index(): \Illuminate\Http\JsonResponse
+    public function index(Request $request): \Illuminate\Http\JsonResponse
     {
-        $payments = Payment::all();
+        $query = Payment::query();
+
+        if ($request->has('id')) {
+            $query->where('id', $request->id);
+        }
+
+        if ($request->has('booking_id')) {
+            $query->where('booking_id', $request->booking_id);
+        }
+
+        if ($request->has('method')) {
+            $query->where('method', 'like', "%{$request->method}%");
+        }
+
+        if ($request->has('min_amount')) {
+            $query->where('amount', '>=', $request->min_amount);
+        }
+
+        if ($request->has('max_amount')) {
+            $query->where('amount', '<=', $request->max_amount);
+        }
+
+        if ($request->has('payment_date')) {
+            $query->whereDate('payment_date', $request->payment_date);
+        }
+
+        $payments = $query->paginate(self::ITEMS_PER_PAGE);
+        $payments->appends($request->except('page'));
+
         return response()->json($payments, Response::HTTP_OK);
     }
 

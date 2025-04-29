@@ -11,7 +11,7 @@ class Payment extends Model
 
     protected $fillable = ['booking_id', 'amount', 'method', 'payment_date'];
 
-    public function booking()
+    public function booking(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Booking::class);
     }
