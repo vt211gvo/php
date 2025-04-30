@@ -4,8 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6abaf8f-b09f-4609-9101-47f35ffec9a6" name="Changes" comment="feat: add optional filters and pagination for laravel">
+    <list default="true" id="c6abaf8f-b09f-4609-9101-47f35ffec9a6" name="Changes" comment="feat: add optional filters and pagination for symfony">
+      <change afterPath="$PROJECT_DIR$/Laravel/app/Models/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Symfony/src/Services/Utility/PaginationService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laravel/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laravel/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laravel/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laravel/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laravel/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laravel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Laravel/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/config/routes.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Symfony/src/Controller/BedController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Controller/BedController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Symfony/src/Controller/BookingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Controller/BookingController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Symfony/src/Controller/GuestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Controller/GuestController.php" afterDir="false" />
@@ -16,18 +33,7 @@
       <change beforePath="$PROJECT_DIR$/Symfony/src/Controller/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Controller/ServiceController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Symfony/src/Controller/ServiceOrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Controller/ServiceOrderController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Symfony/src/Controller/StaffController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Controller/StaffController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/BedRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Repository/BedRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/BookingRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Repository/BookingRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/CurrencyRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/GuestRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Repository/GuestRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/NotificationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Repository/NotificationRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/PaymentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Repository/PaymentRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/ProductRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/ReviewRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Repository/ReviewRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/RoomRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Repository/RoomRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/ServiceOrderRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Repository/ServiceOrderRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/ServiceRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Repository/ServiceRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Symfony/src/Repository/StaffRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/src/Repository/StaffRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Symfony/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Symfony/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +54,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lab3" />
+        <entry key="$PROJECT_DIR$" value="lab4" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -330,6 +336,9 @@
       <path value="$PROJECT_DIR$/Symfony/vendor/symfony/http-client-contracts" />
       <path value="$PROJECT_DIR$/Symfony/vendor/symfony/http-client" />
       <path value="$PROJECT_DIR$/Symfony/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/Laravel/vendor/tymon/jwt-auth" />
+      <path value="$PROJECT_DIR$/Laravel/vendor/lcobucci/clock" />
+      <path value="$PROJECT_DIR$/Laravel/vendor/lcobucci/jwt" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -340,31 +349,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Composer Script.dev.executor": "Run",
-    "Composer Script.serve.executor": "Run",
-    "Docker.Laravel/compose.yaml: Compose Deployment.executor": "Run",
-    "Docker.Symfony/compose.yaml: Compose Deployment.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "lab4",
-    "last_opened_file_path": "C:/Users/vika7/Desktop/4 course 2 semester/фреймворки/Symfony/src/Repository",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Composer Script.dev.executor&quot;: &quot;Run&quot;,
+    &quot;Composer Script.serve.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Laravel/compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Symfony/compose.yaml.hostel-symfony-db: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Symfony/compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;lab5&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vika7/Desktop/4 course 2 semester/фреймворки/Symfony/src/Repository&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\vika7\Desktop\4 course 2 semester\фреймворки\Symfony\src\Repository" />
       <recent name="C:\Users\vika7\Desktop\4 course 2 semester\фреймворки\Symfony" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vika7\Desktop\4 course 2 semester\фреймворки\Symfony\src\Services" />
+    </key>
   </component>
-  <component name="RunManager" selected="Composer Script.serve">
+  <component name="RunManager" selected="Docker.Symfony/compose.yaml: Compose Deployment">
     <configuration name="dev" type="ComposerRunConfigurationType" factoryName="Composer Script" temporary="true">
       <option name="pathToComposerJson" value="$PROJECT_DIR$/Laravel/composer.json" />
       <option name="script" value="dev" />
@@ -400,6 +413,19 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="Symfony/compose.yaml.hostel-symfony-db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="hostel-symfony-db" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="Symfony/compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -408,11 +434,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.Symfony/compose.yaml: Compose Deployment" />
+        <item itemvalue="Docker.Symfony/compose.yaml.hostel-symfony-db: Compose Deployment" />
         <item itemvalue="Composer Script.serve" />
         <item itemvalue="Composer Script.dev" />
-        <item itemvalue="Docker.Symfony/compose.yaml: Compose Deployment" />
         <item itemvalue="Docker.Laravel/compose.yaml: Compose Deployment" />
-        <item itemvalue="Docker.Symfony/compose.yaml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -437,7 +463,9 @@
       <workItem from="1745432645432" duration="2477000" />
       <workItem from="1745681325679" duration="4637000" />
       <workItem from="1745759824533" duration="4084000" />
-      <workItem from="1745943458229" duration="9012000" />
+      <workItem from="1745943458229" duration="14747000" />
+      <workItem from="1745997289298" duration="2873000" />
+      <workItem from="1746046280696" duration="914000" />
     </task>
     <task id="LOCAL-00001" summary="Init, lab 1">
       <option name="closed" value="true" />
@@ -495,7 +523,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745950633421</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: add optional filters and pagination for symfony">
+      <option name="closed" value="true" />
+      <created>1745954979589</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1745954979589</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,6 +544,7 @@
     <MESSAGE value="feat: create db in docker" />
     <MESSAGE value="feat: add controllers with CRUD operation for symfony project" />
     <MESSAGE value="feat: add optional filters and pagination for laravel" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add optional filters and pagination for laravel" />
+    <MESSAGE value="feat: add optional filters and pagination for symfony" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add optional filters and pagination for symfony" />
   </component>
 </project>

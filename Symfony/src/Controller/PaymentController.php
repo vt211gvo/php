@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 
 #[Route('/payment', name: 'payment_routes')]
 class PaymentController extends AbstractController
@@ -23,6 +24,7 @@ class PaymentController extends AbstractController
         $this->paymentRepository = $paymentRepository;
     }
 
+    #[IsGranted("ROLE_USER")]
     #[Route('/', name: 'get_payments', methods: ['GET'])]
     public function getPayments(Request $request): JsonResponse
     {
@@ -34,6 +36,7 @@ class PaymentController extends AbstractController
         return new JsonResponse($data, Response::HTTP_OK);
     }
 
+    #[IsGranted("ROLE_USER")]
     #[Route('/{id}', name: 'get_payment', methods: ['GET'])]
     public function getPayment(int $id): JsonResponse
     {
@@ -46,6 +49,7 @@ class PaymentController extends AbstractController
         return $this->json($payment);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/', name: 'create_payment', methods: ['POST'])]
     public function createPayment(Request $request): JsonResponse
     {
@@ -72,6 +76,7 @@ class PaymentController extends AbstractController
         return $this->json($payment, Response::HTTP_CREATED);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/{id}', name: 'update_payment', methods: ['PATCH'])]
     public function updatePayment(Request $request, int $id): JsonResponse
     {
@@ -108,6 +113,7 @@ class PaymentController extends AbstractController
         return $this->json($payment);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/{id}', name: 'delete_payment', methods: ['DELETE'])]
     public function deletePayment(int $id): JsonResponse
     {

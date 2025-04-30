@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 
 #[Route('/notification', name: 'notification_routes')]
 class NotificationController extends AbstractController
@@ -23,6 +24,7 @@ class NotificationController extends AbstractController
         $this->notificationRepository = $notificationRepository;
     }
 
+    #[IsGranted("ROLE_USER")]
     #[Route('/', name: 'get_notifications', methods: ['GET'])]
     public function getNotifications(Request $request): JsonResponse
     {
@@ -34,6 +36,7 @@ class NotificationController extends AbstractController
         return new JsonResponse($data, Response::HTTP_OK);
     }
 
+    #[IsGranted("ROLE_USER")]
     #[Route('/{id}', name: 'get_notification', methods: ['GET'])]
     public function getNotification(int $id): JsonResponse
     {
@@ -46,6 +49,7 @@ class NotificationController extends AbstractController
         return $this->json($notification);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/', name: 'create_notification', methods: ['POST'])]
     public function createNotification(Request $request): JsonResponse
     {
@@ -71,6 +75,7 @@ class NotificationController extends AbstractController
         return $this->json($notification, Response::HTTP_CREATED);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/{id}', name: 'update_notification', methods: ['PATCH'])]
     public function updateNotification(Request $request, int $id): JsonResponse
     {
@@ -103,6 +108,7 @@ class NotificationController extends AbstractController
         return $this->json($notification);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/{id}', name: 'delete_notification', methods: ['DELETE'])]
     public function deleteNotification(int $id): JsonResponse
     {

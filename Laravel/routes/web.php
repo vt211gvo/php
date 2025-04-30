@@ -22,12 +22,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('bookings', BookingController::class);
-
-Route::resource('services', ServiceController::class);
-
-Route::resource('payments', PaymentController::class);
-
-Route::resource('reviews', ReviewController::class);
-
-Route::resource('guests', GuestController::class);
+//Route::resource('bookings', BookingController::class);
+//
+//Route::resource('services', ServiceController::class);
+//
+//Route::resource('payments', PaymentController::class);
+//
+//Route::resource('reviews', ReviewController::class);
+//
+//Route::resource('guests', GuestController::class);

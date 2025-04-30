@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 
 #[Route('/review', name: 'review_routes')]
 class ReviewController extends AbstractController
@@ -23,6 +24,7 @@ class ReviewController extends AbstractController
         $this->reviewRepository = $reviewRepository;
     }
 
+    #[IsGranted("ROLE_USER")]
     #[Route('/', name: 'get_reviews', methods: ['GET'])]
     public function getReviews(Request $request): JsonResponse
     {
@@ -34,6 +36,7 @@ class ReviewController extends AbstractController
         return new JsonResponse($data, Response::HTTP_OK);
     }
 
+    #[IsGranted("ROLE_USER")]
     #[Route('/{id}', name: 'get_review', methods: ['GET'])]
     public function getReview(int $id): JsonResponse
     {
@@ -46,6 +49,7 @@ class ReviewController extends AbstractController
         return $this->json($review);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/', name: 'create_review', methods: ['POST'])]
     public function createReview(Request $request): JsonResponse
     {
@@ -71,6 +75,7 @@ class ReviewController extends AbstractController
         return $this->json($review, Response::HTTP_CREATED);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/{id}', name: 'update_review', methods: ['PATCH'])]
     public function updateReview(Request $request, int $id): JsonResponse
     {
@@ -103,6 +108,7 @@ class ReviewController extends AbstractController
         return $this->json($review);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/{id}', name: 'delete_review', methods: ['DELETE'])]
     public function deleteReview(int $id): JsonResponse
     {

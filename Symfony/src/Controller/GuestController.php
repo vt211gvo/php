@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 
 #[Route('/guest', name: 'guest_routes')]
 class GuestController extends AbstractController
@@ -23,6 +24,7 @@ class GuestController extends AbstractController
         $this->guestRepository = $guestRepository;
     }
 
+    #[IsGranted("ROLE_USER")]
     #[Route('/', name: 'get_guests', methods: ['GET'])]
     public function getGuests(Request $request): JsonResponse
     {
@@ -34,6 +36,7 @@ class GuestController extends AbstractController
         return new JsonResponse($data, Response::HTTP_OK);
     }
 
+    #[IsGranted("ROLE_USER")]
     #[Route('/{id}', name: 'get_guest', methods: ['GET'])]
     public function getGuest(int $id): JsonResponse
     {
@@ -46,6 +49,7 @@ class GuestController extends AbstractController
         return $this->json($guest);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/', name: 'create_guest', methods: ['POST'])]
     public function createGuest(Request $request): JsonResponse
     {
@@ -65,6 +69,7 @@ class GuestController extends AbstractController
         return $this->json($guest, Response::HTTP_CREATED);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/{id}', name: 'update_guest', methods: ['PATCH'])]
     public function updateGuest(Request $request, int $id): JsonResponse
     {
@@ -89,6 +94,7 @@ class GuestController extends AbstractController
         return $this->json($guest);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/{id}', name: 'delete_guest', methods: ['DELETE'])]
     public function deleteGuest(int $id): JsonResponse
     {

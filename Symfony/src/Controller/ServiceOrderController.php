@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 
 #[Route('/service-order', name: 'service_order_routes')]
 class ServiceOrderController extends AbstractController
@@ -23,6 +24,7 @@ class ServiceOrderController extends AbstractController
         $this->serviceOrderRepository = $serviceOrderRepository;
     }
 
+    #[IsGranted("ROLE_USER")]
     #[Route('/', name: 'get_service_orders', methods: ['GET'])]
     public function getServiceOrders(Request $request): JsonResponse
     {
@@ -34,6 +36,7 @@ class ServiceOrderController extends AbstractController
         return new JsonResponse($data, Response::HTTP_OK);
     }
 
+    #[IsGranted("ROLE_USER")]
     #[Route('/{id}', name: 'get_service_order', methods: ['GET'])]
     public function getServiceOrder(int $id): JsonResponse
     {
@@ -46,6 +49,7 @@ class ServiceOrderController extends AbstractController
         return $this->json($serviceOrder);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/', name: 'create_service_order', methods: ['POST'])]
     public function createServiceOrder(Request $request): JsonResponse
     {
@@ -74,6 +78,7 @@ class ServiceOrderController extends AbstractController
         return $this->json($serviceOrder, Response::HTTP_CREATED);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/{id}', name: 'update_service_order', methods: ['PATCH'])]
     public function updateServiceOrder(Request $request, int $id): JsonResponse
     {
@@ -113,6 +118,7 @@ class ServiceOrderController extends AbstractController
         return $this->json($serviceOrder);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/{id}', name: 'delete_service_order', methods: ['DELETE'])]
     public function deleteServiceOrder(int $id): JsonResponse
     {

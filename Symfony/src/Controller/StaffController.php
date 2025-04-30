@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 
 #[Route('/staff', name: 'staff_routes')]
 class StaffController extends AbstractController
@@ -23,6 +24,7 @@ class StaffController extends AbstractController
         $this->staffRepository = $staffRepository;
     }
 
+    #[IsGranted("ROLE_USER")]
     #[Route('/', name: 'get_staff', methods: ['GET'])]
     public function getStaff(Request $request): JsonResponse
     {
@@ -34,6 +36,7 @@ class StaffController extends AbstractController
         return new JsonResponse($data, Response::HTTP_OK);
     }
 
+    #[IsGranted("ROLE_USER")]
     #[Route('/{id}', name: 'get_staff_by_id', methods: ['GET'])]
     public function getStaffById(int $id): JsonResponse
     {
@@ -46,6 +49,7 @@ class StaffController extends AbstractController
         return $this->json($staff);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/', name: 'create_staff', methods: ['POST'])]
     public function createStaff(Request $request): JsonResponse
     {
@@ -66,6 +70,7 @@ class StaffController extends AbstractController
         return $this->json($staff, Response::HTTP_CREATED);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/{id}', name: 'update_staff', methods: ['PATCH'])]
     public function updateStaff(Request $request, int $id): JsonResponse
     {
@@ -94,6 +99,7 @@ class StaffController extends AbstractController
         return $this->json($staff);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/{id}', name: 'delete_staff', methods: ['DELETE'])]
     public function deleteStaff(int $id): JsonResponse
     {

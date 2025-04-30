@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 
 #[Route('/bed', name: 'bed_routes')]
 class BedController extends AbstractController
@@ -27,6 +28,7 @@ class BedController extends AbstractController
         $this->roomRepository = $roomRepository;
     }
 
+    #[IsGranted("ROLE_USER")]
     #[Route('/', name: 'get_beds', methods: ['GET'])]
     public function getBeds(Request $request): JsonResponse
     {
@@ -38,6 +40,7 @@ class BedController extends AbstractController
         return new JsonResponse($data, Response::HTTP_OK);
     }
 
+    #[IsGranted("ROLE_USER")]
     #[Route('/{id}', name: 'get_bed', methods: ['GET'])]
     public function getBed(int $id): JsonResponse
     {
@@ -50,6 +53,7 @@ class BedController extends AbstractController
         return $this->json($bed);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/', name: 'create_bed', methods: ['POST'])]
     public function createBed(Request $request): JsonResponse
     {
@@ -78,6 +82,7 @@ class BedController extends AbstractController
         return $this->json($bed, Response::HTTP_CREATED);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/{id}', name: 'update_bed', methods: ['PATCH'])]
     public function updateBed(Request $request, int $id): JsonResponse
     {
@@ -106,6 +111,7 @@ class BedController extends AbstractController
         return $this->json($bed);
     }
 
+    #[IsGranted("ROLE_ADMIN")]
     #[Route('/{id}', name: 'delete_bed', methods: ['DELETE'])]
     public function deleteBed(int $id): JsonResponse
     {
